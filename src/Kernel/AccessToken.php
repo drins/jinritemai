@@ -56,10 +56,7 @@ abstract class AccessToken implements AccessTokenInterface
             throw new HttpRequestException($message, $errno);
         }
 
-        return [
-            $respArr['data']['access_token'] ?? '',
-            $respArr['data']['refresh_token'] ?? '',
-        ];
+        return $respArr;
     }
 
     /**
